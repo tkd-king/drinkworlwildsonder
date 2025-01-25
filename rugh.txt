@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wavy Text Along Path</title>
+  <style>
+    body {
+      margin: 0;
+      height: 200vh; /* For scrollable effect */
+      overflow-x: hidden;
+      background: #f0f0f0; /* Light background */
+    }
+
+    .container {
+      position: relative;
+      height: 300px;
+      background: #87CEFA; /* Sky blue background */
+      overflow: hidden;
+    }
+
+    .wavy-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/1500x300') no-repeat center/cover;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    text {
+      font-size: 2rem;
+      font-weight: bold;
+      fill: white; /* Text color */
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>laksjfd;lksajfd</h1>
+  <h1>laksjfd;lksajfd</h1>
+  <h1>laksjfd;lksajfd</h1>
+  <h1>laksjfd;lksajfd</h1>
+  <h1>laksjfd;lksajfd</h1>
+  <div class="container">
+    <!-- Wavy Image -->
+    <div class="wavy-image"></div>
+
+    <!-- SVG Path and Text -->
+    <svg>
+      <!-- Define the Wavy Path -->
+      <path id="wave-path" d="M0,150 Q150,200 300,150 T600,150 T900,150 T1200,150 T1500,150" fill="none" stroke="transparent"></path>
+      <!-- Attach Text to the Path -->
+      <text>
+        <textPath href="#wave-path" id="text-path" startOffset="0">Scroll with the Wave!Scroll with the Wave!Scroll with the Wave!Scroll with the Wave!Scroll with the Wave!Scroll with the Wave!Scroll with the Wave!</textPath>
+      </text>
+    </svg>
+  </div>
+
+  <script>
+    const textPath = document.getElementById('text-path');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const pathLength = 1500; // Total length of the path
+
+      // Scroll offset to move the text
+      const offset = (scrollY / 2) % pathLength; // Modulo keeps text looping
+      textPath.setAttribute('startOffset', offset); // Move text along the path
+    });
+  </script>
+</body>
+</html>
+new functionlity infnite text loop ///////////////////
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prebiotic + Prebiotic sparkling drink for a happy gut - wildwilder</title>
+    
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+     
+     
+     .scrolling-text-wrapper {
+  width: 100%; /* Full width container */
+  overflow: hidden; /* Hide overflow text */
+  position: relative;
+}
+
+.scrolling-text {
+  display: flex; /* Use flexbox to align elements horizontally */
+  animation: scroll 10s linear infinite;
+  gap: 0; /* Ensure no gap between text spans */
+}
+
+.scrolling-text span {
+  white-space: nowrap; /* Prevent text from wrapping */
+  padding-right: 2rem; /* Add spacing for natural flow */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Move entire width of content */
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <div class="banner_outer">
+             <div class="banner_inner">
+                <h1>helo usama keasay ho</h1>
+             </div>
+    </div>
+    <div class="scrolling-text-wrapper">
+      <div class="scrolling-text">
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+        <span>This is an infinite scrolling text without any visible repetition or gap! </span>
+      </div>
+    </div>
+    
+    
+    <footer></footer>
+  </body>
+</html>
